@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <svg width="600" height="100" id="one">
+      <circle cx="40" cy="50" r="40"></circle>
+      <circle cx="130" cy="50" r="40"></circle>
+      <circle cx="220" cy="50" r="40"></circle>
+      <circle cx="310" cy="50" r="40"></circle>
+    </svg>
+    <br />
+    <br />
+    <svg width="600" height="100" id="two">
+      <circle cx="40" cy="50" r="40"></circle>
+      <circle cx="130" cy="50" r="40"></circle>
+      <circle cx="220" cy="50" r="40"></circle>
+      <circle cx="310" cy="50" r="40"></circle>
+    </svg>
+    <br />
+    <br />
+    <script>
+      //   d3.selectAll("circle").style("fill", "lavender");
+      //   d3.selectAll("#two>circle").style("fill", "deeppink");
+
+      //   d3.selectAll("circle:nth-child(2)").style("fill", "deeppink");
+      d3.selectAll(
+        "#one>circle:nth-child(even), #two>circle:nth-child(odd)"
+      ).style("fill", "indigo");
+      //   d3.selectAll("circle:nth-child(odd)").style("fill", "deeppink");
+      d3.selectAll(
+        "#one>circle:nth-child(odd), #two>circle:nth-child(even)"
+      ).style("fill", "deeppink");
+    </script>
+    <!-- <div id="container">
+      <span>First span</span>
+      <p>First paragraph</p>
+      <p>Second paragraph</p>
+      <p>Thrird paragraph</p>
+
+      <span>Second span</span>
+      <p>This is about <span>selections</span></p>
+    </div>
+    <script>
+      //   d3.select("div").style("background", "pink");
+      //   d3.selectAll("p").style("color", "red");
+      d3.select("#container").style("background", "purple");
+    </script> -->
+  </body>
+</html>
